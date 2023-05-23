@@ -1,9 +1,11 @@
+import P from "prop-types";
 import { PostCard } from "../PostCard";
 import "./styles.scss";
+
 export function Posts({ posts }) {
   return (
     <div className="posts">
-      {posts.map(post => (
+      {posts.map((post) => (
         <PostCard
           key={post.id}
           id={post.id}
@@ -15,3 +17,11 @@ export function Posts({ posts }) {
     </div>
   );
 }
+
+Posts.defaultProps = {
+  posts: [],
+};
+
+Posts.propTypes = {
+  posts: P.array,
+};
