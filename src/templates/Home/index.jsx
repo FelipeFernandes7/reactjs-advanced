@@ -1,10 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import "./styles.scss";
-
 import { Posts } from "../../components/Posts";
 import { loadPosts } from "../../utils/load-posts";
 import { Button } from "../../components/Button";
 import { TextInput } from "../../components/TextInput";
+import "./styles.scss";
 
 export function Home() {
   const [posts, setPosts] = useState([]);
@@ -68,7 +67,7 @@ export function Home() {
           <Button
             value={searchValue}
             disabled={noMorePosts}
-            text={"Load More"}
+            text={"Load more"}
             onClick={loadMorePosts}
           />
         )}
